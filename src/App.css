@@ -9,3 +9,10 @@ body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
+
+input {
+  width: 100%;
+  margin: 20px;
+  height: 30px;
+  cursor: pointer;
+}

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import { useTelegram } from "../../hooks/useTelegram"
+import './Form.css'
 
 export default function Form() { 
     const {tg, user} = useTelegram()
-    const [name, setName] = useState(user)
+    const [name, setName] = useState(user?.username)
     const [email, setEmail] = useState('')
     const [wallet, setWallet] = useState('')
     
@@ -35,7 +36,7 @@ export default function Form() {
     }, [name, email, wallet])
 
     return (
-       <div>    
+       <div className="form">    
             <h3>Введите ваши данные</h3>
             <input type="text" placeholder={"Имя"} value={name} onChange={onchangeName}/>
             <input type="text" placeholder={"Email"} value={email} onChange={onchangeEmail}/>
