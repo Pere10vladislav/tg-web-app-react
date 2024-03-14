@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
+import { Routes, Route } from 'react-router-dom';
+import Main from './components/Main/Main';
+import Form from './components/Form/Form';
 const tg = window.Telegram.WebApp
 
 function App() {
@@ -17,11 +20,10 @@ function App() {
     <div className="App">
       
       <Header/>
-
-        <h1>Hi</h1>
-        <button onClick={onClose}>
-          Закрыть приложение
-        </button>
+      <Routes>
+        <Route index element={<Main/>}/>
+        <Route path={'/form'} element={<Form/>}/>
+      </Routes>
     </div>
   );
 }
