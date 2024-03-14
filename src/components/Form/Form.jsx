@@ -2,10 +2,11 @@ import { useEffect, useState } from "react"
 import { useTelegram } from "../../hooks/useTelegram"
 
 export default function Form() { 
-    const [name, setName] = useState('')
+    const {tg, user} = useTelegram()
+    const [name, setName] = useState(user)
     const [email, setEmail] = useState('')
     const [wallet, setWallet] = useState('')
-    const {tg} = useTelegram()
+    
 
     const onchangeName = (e) => {
         setName(e.target.value)
@@ -26,7 +27,7 @@ export default function Form() {
     },)
 
     useEffect(() => {
-       if(!name || !email || wallet){ 
+       if(!name || !email || !wallet){ 
             tg.MainButton.hide()
        } else {
             tg.MainButton.show()
