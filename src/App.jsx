@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Layout } from 'antd';
 import './App.css';
 const tg = window.Telegram.WebApp
 
@@ -14,12 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hi</h1>
-        <button onClick={onClose}>
-          Закрыть приложение
-        </button>
-      </header>
+      <AppLayout/>
     </div>
   );
 }
