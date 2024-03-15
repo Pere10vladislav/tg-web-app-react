@@ -8,6 +8,15 @@ export default function Form() {
     const [email, setEmail] = useState('')
     const [wallet, setWallet] = useState('')
     
+    const onAddUser = async () => {
+        user = {
+            name: name,
+            email: email,
+            wallet: wallet
+        }
+        await axios.post('https://65eb062043ce1641893312d9.mockapi.io/favorit', user)
+        }
+
 
     const onchangeName = (e) => {
         setName(e.target.value)
@@ -41,6 +50,7 @@ export default function Form() {
             <input type="text" placeholder={"Имя"} value={name} onChange={onchangeName}/>
             <input type="text" placeholder={"Email"} value={email} onChange={onchangeEmail}/>
             <input type="text" placeholder={"Trc-20"} value={wallet} onChange={onchangeWallet}/>
+            <button onClick={onAddUser}>Отправить</button>
        </div>
     )
 }
