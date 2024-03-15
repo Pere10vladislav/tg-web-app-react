@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import { Routes, Route } from 'react-router-dom';
 import Main from './components/Main/Main';
-import Form from './components/Form/Form';
+import Register from './components/Register/Register';
 import { useTelegram } from "./hooks/useTelegram"
 
 
@@ -24,7 +24,7 @@ function App() {
       <Header/>
       <Routes>
         <Route index element={<Main/>}/>
-        <Route path={'/form'} element={<Form/>}/>
+        <Route path={'/form'} element={<Register/>}/>
       </Routes>
     </div>
   );

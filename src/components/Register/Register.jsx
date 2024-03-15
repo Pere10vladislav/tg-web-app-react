@@ -3,14 +3,15 @@ import { useTelegram } from "../../hooks/useTelegram"
 import axios from 'axios'
 import './Form.css'
 
-export default function Form() { 
+export default function Register() { 
     const {tg, user, telegram_id} = useTelegram()
     const [ rgUser, setRgUser ] = useState({
         user: user?.username,
         telegram_id: telegram_id,
+        // telegram_id: 428098784,
         clab: false
     })
-    const [ users, setUsers ] = useState({})
+    const [ users, setUsers ] = useState([])
     const [showWallet, setShowWallet] = useState(false)
     
     const onAddUser = async (obj) => {
@@ -42,7 +43,7 @@ export default function Form() {
         const checkedUser = () => {
             return users.some((obj) => Number(obj.telegram_id) === Number(rgUser.telegram_id))
         }
-        
+        setShowWallet(checkedUser)
         tg.MainButton.setParams({
             text: 'Регистрация'
         })
@@ -57,7 +58,7 @@ export default function Form() {
     }, [rgUser])
 
     return (
-        (!showWallet ? 
+        (showWallet ? 
         <div className="form">    
             <h3>Введите ваши данные</h3>
             {true}
