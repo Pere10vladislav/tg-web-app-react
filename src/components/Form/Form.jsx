@@ -4,12 +4,12 @@ import axios from 'axios'
 import './Form.css'
 
 export default function Form() { 
-    const {tg, user, queryId} = useTelegram()
+    const {tg, user} = useTelegram()
     const [ rgUser, setRgUser ] = useState({
         user: user?.username,
         clab: false
     })
-    console.log(queryId)
+    console.log(tg.initDataUnsafe)
     const [ users, setUsers ] = useState({})
     const [showWallet, setShowWallet] = useState(false)
     
