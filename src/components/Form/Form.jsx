@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useTelegram } from "../../hooks/useTelegram"
+import axios from 'axios'
 import './Form.css'
 
 export default function Form() { 
@@ -9,12 +10,11 @@ export default function Form() {
     const [wallet, setWallet] = useState('')
     
     const onAddUser = async () => {
-        user = {
-            name: name,
-            email: email,
-            wallet: wallet
-        }
-        await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', user)
+        let users = new Object()
+        users.name = name
+        users.email = email
+        users.wallet = wallet
+        await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', users)
         }
 
 
