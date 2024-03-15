@@ -38,7 +38,7 @@ export default function Form() {
         const checkedUser = () => {
             return users.some((obj) => obj.telegram_id === rgUser.telegram_id)
         }
-        setShowWallet(checkedUser())
+        setShowWallet(checkedUser)
         tg.MainButton.setParams({
             text: 'Регистрация'
         })
