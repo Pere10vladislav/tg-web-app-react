@@ -4,9 +4,11 @@ import Header from './components/Header/Header';
 import { Routes, Route } from 'react-router-dom';
 import Main from './components/Main/Main';
 import Form from './components/Form/Form';
-const tg = window.Telegram.WebApp
+import { useTelegram } from "./hooks/useTelegram"
+
 
 function App() {
+  const {tg} = useTelegram()
 
   useEffect(() => {
     tg.ready()

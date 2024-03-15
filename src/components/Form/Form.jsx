@@ -38,7 +38,7 @@ export default function Form() {
         tg.MainButton.setParams({
             text: 'Регистрация'
         })
-    },)
+    },[])
 
     useEffect(() => {
        if(!rgUser.user || !rgUser.email || !rgUser.wallet){ 
