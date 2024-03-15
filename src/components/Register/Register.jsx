@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { redirect } from "react-router-dom";
 import { useTelegram } from "../../hooks/useTelegram"
 import axios from 'axios'
 import './Form.css'
