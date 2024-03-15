@@ -14,7 +14,6 @@ export default function Form() {
     
     const onAddUser = async (obj) => {
         await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', obj)
-        await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/test', tg.initDataUnsafe.chat)
         }
 
 
@@ -53,7 +52,7 @@ export default function Form() {
     return (
         (!showWallet ? 
         <div className="form">    
-            <h3>Введите ваши данные</h3>
+            <h3>Введите ваши данные</h3>{tg.initDataUnsafe.chat}
             <input type="text" placeholder={"Имя"} value={rgUser.user} onChange={onchangeName}/>
             <input type="text" placeholder={"Email"} value={rgUser.email} onChange={onchangeEmail}/>
             <input type="text" placeholder={"Trc-20"} value={rgUser.wallet} onChange={onchangeWallet}/>
