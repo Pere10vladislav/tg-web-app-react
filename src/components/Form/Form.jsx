@@ -4,10 +4,14 @@ import axios from 'axios'
 import './Form.css'
 
 export default function Form() { 
-    const {tg, user} = useTelegram()
+    const {tg, user, queryId} = useTelegram()
     const [ rgUser, setRgUser ] = useState({
         user: user?.username,
+        clab: false
     })
+    console.log(queryId)
+    const [ users, setUsers ] = useState({})
+    const [showWallet, setShowWallet] = useState(false)
     
     const onAddUser = async (obj) => {
         await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', obj)
@@ -15,7 +19,7 @@ export default function Form() {
 
 
     const onchangeName = (e) => {
-        setRgUser((prev) => ({ ...prev, name: e.target.value }))
+        setRgUser((prev) => ({ ...prev, user: e.target.value }))
     }
 
     const onchangeEmail = (e) => {
@@ -26,14 +30,20 @@ export default function Form() {
         setRgUser((prev) => ({ ...prev, wallet: e.target.value }))
     }
 
+    const checkedUser = (user_id) => {
+        return cartItems.some((obj) => Number(obj.product_id) === Number(product_id))
+    }
+
     useEffect(() => {
+        const usersResponse = axios.get('https://65e996c3c9bf92ae3d399125.mockapi.io/user')
+        setUsers(usersResponse)
         tg.MainButton.setParams({
             text: 'Регистрация'
         })
     },)
 
     useEffect(() => {
-       if(!rgUser.name || !rgUser.email || !rgUser.wallet){ 
+       if(!rgUser.user || !rgUser.email || !rgUser.wallet){ 
             tg.MainButton.hide()
        } else {
             tg.MainButton.show()
@@ -41,12 +51,15 @@ export default function Form() {
     }, [rgUser])
 
     return (
-       <div className="form">    
+        (!showWallet ? 
+        <div className="form">    
             <h3>Введите ваши данные</h3>
-            <input type="text" placeholder={"Имя"} value={rgUser.name} onChange={onchangeName}/>
+            <input type="text" placeholder={"Имя"} value={rgUser.user} onChange={onchangeName}/>
             <input type="text" placeholder={"Email"} value={rgUser.email} onChange={onchangeEmail}/>
             <input type="text" placeholder={"Trc-20"} value={rgUser.wallet} onChange={onchangeWallet}/>
             <button onClick={() => onAddUser(rgUser)}>Отправить</button>
-       </div>
+        </div> : <div></div>
+        )
+      
     )
 }
