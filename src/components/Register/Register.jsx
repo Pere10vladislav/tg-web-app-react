@@ -57,6 +57,9 @@ export default function Register() {
        }
     }, [rgUser])
 
+    if (!showWallet) {
+        return redirect("/");
+      }
     return (
         (showWallet ? 
         <div className="form">    
