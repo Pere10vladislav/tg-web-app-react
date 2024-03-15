@@ -38,7 +38,7 @@ export default function Form() {
         }
         const userResponse = axios.get('https://65e996c3c9bf92ae3d399125.mockapi.io/user')
         setUsers(userResponse.data)
-        setShowWallet(checkedUser())
+        setShowWallet(checkedUser)
         tg.MainButton.setParams({
             text: 'Регистрация'
         })
