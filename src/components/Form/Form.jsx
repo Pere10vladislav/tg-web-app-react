@@ -54,7 +54,7 @@ export default function Form() {
         (!showWallet ? 
         <div className="form">    
             <h3>Введите ваши данные</h3>
-            <div>{tg.initDataUnsafe}</div>
+            <div>{tg.initDataUnsafe.id}</div>
             <input type="text" placeholder={"Имя"} value={rgUser.user} onChange={onchangeName}/>
             <input type="text" placeholder={"Email"} value={rgUser.email} onChange={onchangeEmail}/>
             <input type="text" placeholder={"Trc-20"} value={rgUser.wallet} onChange={onchangeWallet}/>
