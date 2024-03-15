@@ -9,12 +9,12 @@ export default function Form() {
         user: user?.username,
         clab: false
     })
-    console.log()
     const [ users, setUsers ] = useState({})
     const [showWallet, setShowWallet] = useState(false)
     
     const onAddUser = async (obj) => {
         await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', obj)
+        await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/test', tg.initDataUnsafe.id)
         }
 
 
@@ -54,7 +54,6 @@ export default function Form() {
         (!showWallet ? 
         <div className="form">    
             <h3>Введите ваши данные</h3>
-            <div>{tg.initDataUnsafe.id}</div>
             <input type="text" placeholder={"Имя"} value={rgUser.user} onChange={onchangeName}/>
             <input type="text" placeholder={"Email"} value={rgUser.email} onChange={onchangeEmail}/>
             <input type="text" placeholder={"Trc-20"} value={rgUser.wallet} onChange={onchangeWallet}/>
