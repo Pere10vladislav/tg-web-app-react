@@ -10,10 +10,11 @@ export default function Form() {
     const [wallet, setWallet] = useState('')
     
     const onAddUser = async () => {
-        let users = new Object()
-        users.name = name
-        users.email = email
-        users.wallet = wallet
+        let users = {
+            name: name,
+            email: email,
+            wallet: wallet,
+        }
         await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', users)
         }
 
