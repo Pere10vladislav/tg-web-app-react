@@ -14,7 +14,7 @@ export default function Form() {
             email: email,
             wallet: wallet
         }
-        await axios.post('https://65eb062043ce1641893312d9.mockapi.io/favorit', user)
+        await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', user)
         }
 
 
