@@ -33,12 +33,12 @@ export default function Form() {
     },)
 
     useEffect(() => {
-       if(!name || !email || !wallet){ 
+       if(!rgUser.name || !rgUser.email || !rgUser.wallet){ 
             tg.MainButton.hide()
        } else {
             tg.MainButton.show()
        }
-    }, [name, email, wallet])
+    }, [rgUser])
 
     return (
        <div className="form">    
