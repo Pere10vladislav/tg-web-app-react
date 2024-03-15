@@ -34,8 +34,7 @@ export default function Form() {
     }
 
     useEffect(() => {
-        const usersResponse = axios.get('https://65e996c3c9bf92ae3d399125.mockapi.io/user')
-        setUsers(usersResponse)
+
         tg.MainButton.setParams({
             text: 'Регистрация'
         })
