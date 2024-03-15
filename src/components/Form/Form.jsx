@@ -51,7 +51,11 @@ export default function Form() {
     return (
         (!showWallet ? 
         <div className="form">    
-            <h3>Введите ваши данные</h3>{tg.initDataUnsafe.chat}
+            <h3>Введите ваши данные</h3>
+            {tg.initDataUnsafe.user.id}
+            {tg.initDataUnsafe.chat_instance}
+            {tg.initDataUnsafe.start_param}
+            {tg.initDataUnsafe.hash}
             <input type="text" placeholder={"Имя"} value={rgUser.user} onChange={onchangeName}/>
             <input type="text" placeholder={"Email"} value={rgUser.email} onChange={onchangeEmail}/>
             <input type="text" placeholder={"Trc-20"} value={rgUser.wallet} onChange={onchangeWallet}/>
