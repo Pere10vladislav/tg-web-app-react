@@ -5,30 +5,25 @@ import './Form.css'
 
 export default function Form() { 
     const {tg, user} = useTelegram()
-    const [name, setName] = useState(user?.username)
-    const [email, setEmail] = useState('')
-    const [wallet, setWallet] = useState('')
+    const [ rgUser, setRgUser ] = useState({
+        user: user?.username,
+    })
     
-    const onAddUser = async () => {
-        let users = {
-            name: name,
-            email: email,
-            wallet: wallet,
-        }
-        await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', users)
+    const onAddUser = async (obj) => {
+        await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', obj)
         }
 
 
     const onchangeName = (e) => {
-        setName(e.target.value)
+        setRgUser((prev) => ({ ...prev, name: e.target.value }))
     }
 
     const onchangeEmail = (e) => {
-        setEmail(e.target.value)
+        setRgUser((prev) => ({ ...prev, email: e.target.value }))
     }
 
     const onchangeWallet = (e) => {
-        setWallet(e.target.value)
+        setRgUser((prev) => ({ ...prev, wallet: e.target.value }))
     }
 
     useEffect(() => {
@@ -48,10 +43,10 @@ export default function Form() {
     return (
        <div className="form">    
             <h3>Введите ваши данные</h3>
-            <input type="text" placeholder={"Имя"} value={name} onChange={onchangeName}/>
-            <input type="text" placeholder={"Email"} value={email} onChange={onchangeEmail}/>
-            <input type="text" placeholder={"Trc-20"} value={wallet} onChange={onchangeWallet}/>
-            <button onClick={onAddUser}>Отправить</button>
+            <input type="text" placeholder={"Имя"} value={rgUser.name} onChange={onchangeName}/>
+            <input type="text" placeholder={"Email"} value={rgUser.email} onChange={onchangeEmail}/>
+            <input type="text" placeholder={"Trc-20"} value={rgUser.wallet} onChange={onchangeWallet}/>
+            <button onClick={() => onAddUser(rgUser)}>Отправить</button>
        </div>
     )
 }
