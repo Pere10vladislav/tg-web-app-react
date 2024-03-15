@@ -33,12 +33,12 @@ export default function Form() {
 
 
     useEffect(() => {
-        const checkedUser = () => {
-            return users.some((obj) => Number(obj.telegram_id) === Number(rgUser.telegram_id))
-        }
+        // const checkedUser = () => {
+        //     return users.some((obj) => Number(obj.telegram_id) === Number(rgUser.telegram_id))
+        // }
         const userResponse = axios.get('https://65e996c3c9bf92ae3d399125.mockapi.io/user')
         setUsers(userResponse.data)
-        setShowWallet(checkedUser)
+        // setShowWallet(checkedUser)
         tg.MainButton.setParams({
             text: 'Регистрация'
         })
@@ -56,6 +56,7 @@ export default function Form() {
         (!showWallet ? 
         <div className="form">    
             <h3>Введите ваши данные</h3>
+            {true}
             <input type="text" placeholder={"Имя"} value={rgUser.user} onChange={onchangeName}/>
             <input type="text" placeholder={"Email"} value={rgUser.email} onChange={onchangeEmail}/>
             <input type="text" placeholder={"Trc-20"} value={rgUser.wallet} onChange={onchangeWallet}/>
