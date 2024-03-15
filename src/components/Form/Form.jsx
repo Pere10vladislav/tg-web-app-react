@@ -33,12 +33,16 @@ export default function Form() {
 
 
     useEffect(() => {
-        const userResponse = axios.get('https://65e996c3c9bf92ae3d399125.mockapi.io/user')
-        setUsers(userResponse.data)
-        const checkedUser = () => {
-            return users.some((obj) => obj.telegram_id === rgUser.telegram_id)
+
+        async function fetchData() {
+            const userResponse = await axios.get('https://65e996c3c9bf92ae3d399125.mockapi.io/user')
+            setUsers(userResponse.data)
         }
-        setShowWallet(true)
+        fetchData ()
+        const checkedUser = () => {
+            return users.some((obj) => Number(obj.telegram_id) === Number(rgUser.telegram_id))
+        }
+        setShowWallet(checkedUser())
         tg.MainButton.setParams({
             text: 'Регистрация'
         })
