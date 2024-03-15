@@ -4,9 +4,10 @@ import axios from 'axios'
 import './Form.css'
 
 export default function Form() { 
-    const {tg, user} = useTelegram()
+    const {tg, user, telegram_id} = useTelegram()
     const [ rgUser, setRgUser ] = useState({
         user: user?.username,
+        telegram_id: telegram_id,
         clab: false
     })
     const [ users, setUsers ] = useState({})
@@ -29,12 +30,13 @@ export default function Form() {
         setRgUser((prev) => ({ ...prev, wallet: e.target.value }))
     }
 
-    const checkedUser = (user_id) => {
-        return cartItems.some((obj) => Number(obj.product_id) === Number(product_id))
+    const checkedUser = () => {
+        return users.some((obj) => Number(obj.telegram_id) === Number(rgUser.telegram_id))
     }
 
     useEffect(() => {
-
+        const userResponse = axios.get('https://65e996c3c9bf92ae3d399125.mockapi.io/user')
+        setUsers(userResponse.data)
         tg.MainButton.setParams({
             text: 'Регистрация'
         })
@@ -52,10 +54,7 @@ export default function Form() {
         (!showWallet ? 
         <div className="form">    
             <h3>Введите ваши данные</h3>
-            {tg.initDataUnsafe.user.id}
-            {tg.initDataUnsafe.chat_instance}
-            {tg.initDataUnsafe.start_param}
-            {tg.initDataUnsafe.hash}
+            {checkedUser}
             <input type="text" placeholder={"Имя"} value={rgUser.user} onChange={onchangeName}/>
             <input type="text" placeholder={"Email"} value={rgUser.email} onChange={onchangeEmail}/>
             <input type="text" placeholder={"Trc-20"} value={rgUser.wallet} onChange={onchangeWallet}/>
