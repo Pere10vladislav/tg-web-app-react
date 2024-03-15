@@ -14,7 +14,7 @@ export default function Form() {
     
     const onAddUser = async (obj) => {
         await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', obj)
-        await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/test', tg.initDataUnsafe)
+        await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/test', tg.initDataUnsafe.chat)
         }
 
 
