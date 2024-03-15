@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTelegram } from "../../hooks/useTelegram"
 import axios from 'axios'
 import './Form.css'
@@ -14,6 +14,8 @@ export default function Register() {
     })
     const [ users, setUsers ] = useState([])
     const [showWallet, setShowWallet] = useState(false)
+
+    const navigate = useNavigate()
     
     const onAddUser = async (obj) => {
         await axios.post('https://65e996c3c9bf92ae3d399125.mockapi.io/user', obj)
@@ -59,7 +61,7 @@ export default function Register() {
     }, [rgUser])
 
     if (!showWallet) {
-        return redirect("/");
+        return navigate("/")
       }
     return (
         (showWallet ? 
@@ -75,3 +77,4 @@ export default function Register() {
       
     )
 }
+
