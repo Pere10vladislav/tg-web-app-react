@@ -72,7 +72,7 @@ export default function Register() {
             <input type="text" placeholder={"Email"} value={rgUser.email} onChange={onchangeEmail}/>
             <input type="text" placeholder={"Trc-20"} value={rgUser.wallet} onChange={onchangeWallet}/>
             <button onClick={() => onAddUser(rgUser)}>Отправить</button>
-        </div> : <div>sdasd</div>
+        </div> : <div>Оплатите подписку на премиум</div>
         )
       
     )

@@ -17,3 +17,11 @@ input {
   height: 30px;
   cursor: pointer;
 }
+
+.main{
+  color: aqua;
+}
+
+.main:hover{
+  color: burlywood;
+}
