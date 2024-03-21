@@ -1,7 +1,7 @@
 import { useState } from "react"
 import './Club.css';
 
-export default function Club({onTabClub, onTabTrade}) {     
+export default function Club({onTabClub, onTabTrade, referals}) {     
 
 
     return (

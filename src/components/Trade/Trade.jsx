@@ -1,7 +1,7 @@
 import { useState } from "react"
 import './Trade.css';
 
-export default function Trade({onTabClub, onTabTrade}) {     
+export default function Trade({onTabClub, onTabTrade, referals}) {     
 
 
     return (
@@ -47,6 +47,7 @@ export default function Trade({onTabClub, onTabTrade}) {
                         <li>3 ур</li>
                     </ul>
                 </div>
+                {referals.map((obj) =><li>HUI</li>)}
                 <div className="referal__list--body">
                     <ul>
                         <li>
