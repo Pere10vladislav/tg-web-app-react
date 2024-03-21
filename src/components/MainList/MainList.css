@@ -1,0 +1,40 @@
+.heared {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__logo div {
+    font-size: 22px;
+}
+
+.header__logo div span {
+    font-size: 10px;
+}
+
+.info {
+    display: flex;
+}
+
+.heared {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__logo div span {
+    font-size: 8px;
+}
+
+.info {
+    display: flex;
+}
+
+.navigat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigat div {
+    border-bottom: 1px solid;
+    width: 50%;
+    text-align: center;
+}

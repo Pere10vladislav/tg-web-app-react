@@ -18,10 +18,3 @@ input {
   cursor: pointer;
 }
 
-.main{
-  color: aqua;
-}
-
-.main:hover{
-  color: burlywood;
-}
