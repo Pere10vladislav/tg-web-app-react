@@ -6,7 +6,7 @@
 }
 
 body {
-  padding: 20px;
+  padding: 0;
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
@@ -17,4 +17,5 @@ input {
   height: 30px;
   cursor: pointer;
 }
+
 

@@ -24,12 +24,12 @@ export default function MainList({}) {
                 <div className="info__chenal">
                     <div className="info__chenal--leftBlock">
                         <h5>Презентация Smart Club</h5>
-                        <span>Скачать</span>
+                        <span>Перйти</span>
                     </div>
                 </div>
             </div>
             <div className="navigat">
-                <div>
+                <div className="activ">
                     Клубные вознаграждения
                 </div>
                 <div>
@@ -40,7 +40,7 @@ export default function MainList({}) {
                 <div className="referal__list--header">
                     <ul>
                         <li>Все</li>
-                        <li>1 ур</li>
+                        <li className="activ">1 ур</li>
                         <li>2 ур</li>
                         <li>3 ур</li>
                         <li>4 ур</li>
