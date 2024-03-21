@@ -24,7 +24,7 @@ export default function MainList({}) {
                 <div className="info__chenal">
                     <div className="info__chenal--leftBlock">
                         <h5>Презентация Smart Club</h5>
-                        <span>Перйти</span>
+                        <span><a href="https://t.me/+YF8N2z0U5AgzMzY6">Перйти</a></span>
                     </div>
                 </div>
             </div>
