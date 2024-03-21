@@ -1,13 +1,15 @@
 import { useState } from "react"
-import './MainList.css';
+import './Club.css';
 
-export default function MainList({}) {     
+export default function Club({onTabClub, onTabTrade}) {     
+
+
     return (
        <div className="MailList">
             <div className="heared">
                 <div className="header__logo">
                     <h5>Клубные вознаграждения</h5>
-                    <div>100.00 <span>USDT</span></div>
+                    <div>40000.00 <span>USDT</span></div>
                 </div>
                 <div className="header__btn">
                     <button>Вывести</button>
@@ -29,10 +31,10 @@ export default function MainList({}) {
                 </div>
             </div>
             <div className="navigat">
-                <div className="activ">
+                <div className="activ" onClick={onTabClub}>
                     Клубные вознаграждения
                 </div>
-                <div>
+                <div onClick={onTabTrade}>
                     Торговые вознаграждения
                 </div>
             </div>
