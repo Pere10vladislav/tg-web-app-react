@@ -47,69 +47,21 @@ export default function Trade({onTabClub, onTabTrade, referals}) {
                         <li>3 ур</li>
                     </ul>
                 </div>
-                {referals.map((obj) =><li>HUI</li>)}
+                
                 <div className="referal__list--body">
                     <ul>
-                        <li>
-                            <div className="referal__list--body-li-left">
-                                <h5>Татьяна</h5>
-                                <span>@tat1203</span>
-                            </div>
-                            <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
-                                <span>tttt123@gmail.com</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="referal__list--body-li-left">
-                                <h5>Татьяна</h5>
-                                <span>@tat1203</span>
-                            </div>
-                            <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
-                                <span>tttt123@gmail.com</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="referal__list--body-li-left">
-                                <h5>Татьяна</h5>
-                                <span>@tat1203</span>
-                            </div>
-                            <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
-                                <span>tttt123@gmail.com</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="referal__list--body-li-left">
-                                <h5>Татьяна</h5>
-                                <span>@tat1203</span>
-                            </div>
-                            <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
-                                <span>tttt123@gmail.com</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="referal__list--body-li-left">
-                                <h5>Татьяна</h5>
-                                <span>@tat1203</span>
-                            </div>
-                            <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
-                                <span>tttt123@gmail.com</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="referal__list--body-li-left">
-                                <h5>Татьяна</h5>
-                                <span>@tat1203</span>
-                            </div>
-                            <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
-                                <span>tttt123@gmail.com</span>
-                            </div>
-                        </li>
+                        {referals?.lvl1.map((obj) =>
+                            <li>
+                                <div className="referal__list--body-li-left">
+                                    <h5>{obj.name}</h5>
+                                    <span>@{obj.user}</span>
+                                </div>
+                                <div className="referal__list--body-li-right">
+                                    <h5>1ур</h5>
+                                    <span>{obj.email}</span>
+                                </div>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </div>

@@ -1,8 +1,7 @@
 import { useState } from "react"
 import './Club.css';
 
-export default function Club({onTabClub, onTabTrade, referals}) {     
-
+export default function Club({onTabClub, onTabTrade, referals}) {    
 
     return (
        <div className="MailList">

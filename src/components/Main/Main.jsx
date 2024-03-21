@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Club from "../Club/Club"
 import Trade from "../Trade/Trade"
+import axios from 'axios'
 
 export default function Main() { 
     const [ user, setUser ] = useState([])
@@ -14,7 +15,6 @@ export default function Main() {
         }
         fetchData ()
     },[])
-
 
     const onTabTrade = () => {
         setTab('trade')
