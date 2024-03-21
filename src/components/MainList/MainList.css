@@ -34,7 +34,58 @@
 }
 
 .navigat div {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid grey;
     width: 50%;
     text-align: center;
+}
+
+
+.referal__list--body ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .referal__list--body ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid grey;
+  }
+  
+  .referal__list--header ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Позволяет элементам списка распределяться равномерно в ряду */
+    grid-gap: 0; /* Устанавливает промежутки между элементами в 0 */
+    padding: 0; /* Убирает внутренний отступ */
+  }
+  
+  .referal__list--header li {
+    list-style-type: none; /* Убирает маркеры списка */
+    text-align: center; /* Выравнивает текст по центру */
+    padding: 10px; /* Добавляет отступы вокруг текста */
+    border-bottom: 1px solid grey; /* Добавляет границу для отображения границ элементов */
+  }
+  
+  .activ {
+    font-weight: bold; /* Пример стилизации активного элемента */
+    color: white; /* Пример изменения фона активного элемента */
+    border-bottom: 1px solid white;
+  }
+
+  .info__presentation {
+    min-height: 70px;
+    margin-left: 30px;
+    width: 75%;
+}
+
+.info__chenal {
+    margin-left: 15px;
+    width: 25%;
+}
+
+.header__btn button {
+    border: 0;
+    padding: 5px;
+    color: white;
+    background-color: grey;
 }
