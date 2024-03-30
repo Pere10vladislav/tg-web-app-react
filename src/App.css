@@ -19,3 +19,130 @@ input {
 }
 
 
+
+
+
+
+
+
+
+
+
+.header__logo h5 {
+  color: #949494;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.header__logo .header__logo--price {
+  font-size: 32px;
+  color: var(--tg-theme-text-color);
+  margin: 0 6px 0 8px;
+}
+
+.header__logo div span {
+  font-size: 14px;
+  color: rgb(148, 148, 148);
+}
+
+.info {
+  display: flex;
+}
+
+.heared {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+.info {
+  display: flex;
+}
+
+.navigat {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigat div {
+  border-bottom: 1px solid grey;
+  width: 50%;
+  text-align: center;
+}
+
+
+.referal__list--body ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.referal__list--body ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid grey;
+}
+
+.referal__list--header ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Позволяет элементам списка распределяться равномерно в ряду */
+  grid-gap: 0; /* Устанавливает промежутки между элементами в 0 */
+  padding: 0; /* Убирает внутренний отступ */
+}
+
+.referal__list--header li {
+  list-style-type: none; /* Убирает маркеры списка */
+  text-align: center; /* Выравнивает текст по центру */
+  padding: 10px; /* Добавляет отступы вокруг текста */
+  border-bottom: 1px solid grey; /* Добавляет границу для отображения границ элементов */
+}
+
+.activ {
+  font-weight: bold; /* Пример стилизации активного элемента */
+  color: white; /* Пример изменения фона активного элемента */
+  border-bottom: 1px solid white;
+}
+
+.info__presentation {
+  min-height: 70px;
+  margin-left: 30px;
+  width: 75%;
+  background-color: cornflowerblue;
+}
+
+.info__chenal {
+  margin-left: 15px;
+  width: 25%;
+  background-color: aquamarine;
+}
+
+.header__btn button {
+  border: 0;
+  padding: 5px;
+  color: white;
+  background-color: grey;
+}
+
+.header__btn button {
+  border: 0;
+  padding: 5px;
+  color: white;
+  background-color: grey;
+}
+
+.header__btn {
+  display: flex;
+  align-items: center;
+}
+
+.info>div {
+  padding: 30px;
+}
+
+.info>div>div {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
