@@ -108,13 +108,16 @@ input {
   min-height: 70px;
   margin-left: 30px;
   width: 75%;
-  background-color: var(--tg-theme-hint-color);
+  color: var(--tg-theme-button-text-color);
+  /* background-color: var(--tg-theme-hint-color); */
+  background-color: var(--tg-theme-link-color);
 }
 
 .info__chenal {
+  color: var(--tg-theme-secondary-bg-color);
   margin-left: 15px;
   width: 25%;
-  background-color: aquamarine;
+  background-color: var(--tg-theme-button-color);
 }
 
 .header__btn button {
