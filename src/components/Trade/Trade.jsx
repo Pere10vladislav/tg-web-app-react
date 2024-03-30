@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Slider from "../Slider/Slider"
 // import './Trade.css';
 
 export default function Trade({onTabClub, onTabTrade, referals}) {     
@@ -25,21 +26,7 @@ export default function Trade({onTabClub, onTabTrade, referals}) {
                     </svg>
                 </div>
             </div>
-            <div className="info">
-                <div className="info__presentation">
-                    <div className="info__presentation--leftBlock">
-                        <h5>Презентация Smart Club</h5>
-                        <span>Скачать</span>
-                    </div>
-                    <img src=""/>
-                </div>
-                <div className="info__chenal">
-                    <div className="info__chenal--leftBlock">
-                        <h5>Презентация Smart Club</h5>
-                        <span><a href="https://t.me/+YF8N2z0U5AgzMzY6">Перйти</a></span>
-                    </div>
-                </div>
-            </div>
+            <Slider/>
             <div className="navigat">
                 <div onClick={onTabClub}>
                     Клубные вознаграждения
