@@ -109,10 +109,9 @@ input {
   justify-content: space-between;
   padding: 16px;
   border-radius: 12px;
-  margin: 0px 8px;
   min-height: 70px;
   margin-left: 30px;
-  width: 100%;
+  width: auto;
   background-color: #949494;
   /* background-color: var(--tg-theme-hint-color); */
 }

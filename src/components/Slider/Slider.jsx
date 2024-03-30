@@ -7,8 +7,8 @@ export default function Slider() {
 
     return (
         <Swiper
-          spaceBetween={40}
-          slidesPerView={2}
+          spaceBetween={8}
+          slidesPerView={1.5}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
@@ -65,7 +65,7 @@ export default function Slider() {
                 </svg>
             </div>
         </div>
-    </SwiperSlide>          ...
+    </SwiperSlide>
         </Swiper>
       );
 }
