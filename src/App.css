@@ -1,7 +1,15 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src:
+    local("Roboto"),
+    url("/src/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
 * { 
   margin: 0;
   padding: 0;
   box-shadow: border-box;
+  font-family: "Roboto", sans-serif;
 
 }
 
