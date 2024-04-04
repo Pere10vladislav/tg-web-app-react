@@ -1,8 +1,6 @@
 @font-face {
   font-family: "Roboto", sans-serif;
-  src:
-    local("Roboto"),
-    url("/src/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
 }
 
 * { 
@@ -70,13 +68,21 @@ input {
 .navigat {
   margin-top: 25px;
   display: flex;
-  justify-content: space-between;
+  border-bottom: 1px solid rgba(148, 148, 148, 0.5);
 }
 
 .navigat div {
-  border-bottom: 1px solid grey;
-  width: 50%;
+  padding: 0 10px;
+}
+
+.navigat div span {
+  font-weight: 500;
+  width: auto;
   text-align: center;
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -86,10 +92,13 @@ input {
 }
 
 .referal__list--body ul li {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    /* border-bottom: 1px solid grey; */
+    background-color: rgb(35, 46, 60);
+    margin-bottom: 8px;
+    border-radius: 12px;
 }
 
 .referal__list--header ul {
@@ -103,13 +112,20 @@ input {
   list-style-type: none; /* Убирает маркеры списка */
   text-align: center; /* Выравнивает текст по центру */
   padding: 10px; /* Добавляет отступы вокруг текста */
-  border-bottom: 1px solid grey; /* Добавляет границу для отображения границ элементов */
 }
 
-.activ {
+.activ>span  {
   font-weight: bold; /* Пример стилизации активного элемента */
-  color: white; /* Пример изменения фона активного элемента */
-  border-bottom: 1px solid white;
+  color: rgb(251, 144, 46); /* Пример изменения фона активного элемента */
+}
+
+.activ>span::after  {
+  content: '';
+  display: flex;
+  background-color: rgb(251, 144, 46);
+  width: 100%;
+  height: 4px;
+  border-radius: 6px 6px 0 0;
 }
 
 .info__presentation {
@@ -162,4 +178,44 @@ input {
   color: rgb(148, 148, 148);
   font-family: Roboto;
   font-size: 14px;
+}
+
+.referal__list li.activ {
+  background-color: rgb(251, 144, 46);
+  border-radius: 8px;
+  color: white;
+}
+
+.referal__list {
+  padding: 25px 24px;
+}
+
+.referal__list--header {
+    padding: 4px;
+    border-radius: 10px;
+    font-weight: 400;
+    background-color: rgb(35, 46, 60);
+    color: rgb(148, 148, 148);
+    margin-bottom: 24px ;
+    /* background-color: var(--tg-theme-hint-color);*/
+}
+
+.referal__list {
+  color: rgb(148, 148, 148);
+}
+
+.referal__list--body-li-left h5 {
+  color: white;
+}
+
+.referal__list--body-li-right h5 {
+  color: rgb(80, 199, 135);
+}
+
+.referal__list--body-li-right h5 svg {
+  margin-right: 5px;
+}
+
+.referal__list--body h5 {
+  margin-bottom: 12px;
 }

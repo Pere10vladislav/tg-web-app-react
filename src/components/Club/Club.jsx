@@ -27,17 +27,17 @@ export default function Club({onTabClub, onTabTrade, referals}) {
             </div>
             <Slider/>
             <div className="navigat">
-                <div className="activ" onClick={onTabClub}>
-                    Клубные вознаграждения
+                <div onClick={onTabClub}>
+                    <span>Клубные вознаграждения</span>
                 </div>
-                <div onClick={onTabTrade}>
-                    Торговые вознаграждения
+                <div className="activ" onClick={onTabTrade}>
+                <span>Торговые вознаграждения</span>
                 </div>
             </div>
             <div className="referal__list">
                 <div className="referal__list--header">
                     <ul>
-                        <li>Все</li>
+                        <li className="referal__list--all">Все</li>
                         <li className="activ">1 ур</li>
                         <li>2 ур</li>
                         <li>3 ур</li>
@@ -53,7 +53,13 @@ export default function Club({onTabClub, onTabTrade, referals}) {
                                 <span>@tat1203</span>
                             </div>
                             <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
+                                <h5>
+                                    <svg width="11.000000" height="11.000000" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <defs/>
+                                        <path id="Vector" d="M-0.5 5C-0.5 1.96 1.96 -0.5 5 -0.5C8.03 -0.5 10.5 1.96 10.5 5C10.5 6.55 9.85 7.96 8.8 8.96C7.81 9.91 6.47 10.5 5 10.5C3.52 10.5 2.18 9.91 1.19 8.96C0.14 7.96 -0.5 6.55 -0.5 5ZM8.11 8.56C7.89 7.9 7.26 7.43 6.53 7.43L3.46 7.43C2.73 7.43 2.1 7.9 1.88 8.56C2.71 9.29 3.8 9.73 5 9.73C6.19 9.73 7.28 9.29 8.11 8.56ZM5 1.03C3.65 1.03 2.56 2.12 2.56 3.46C2.56 4.8 3.65 5.89 5 5.89C6.34 5.89 7.43 4.8 7.43 3.46C7.43 2.12 6.34 1.03 5 1.03Z" fill="#50C787" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                     1 ур
+                                </h5>
                                 <span>tttt123@gmail.com</span>
                             </div>
                         </li>
@@ -63,7 +69,13 @@ export default function Club({onTabClub, onTabTrade, referals}) {
                                 <span>@tat1203</span>
                             </div>
                             <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
+                                                                <h5>
+                                    <svg width="11.000000" height="11.000000" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <defs/>
+                                        <path id="Vector" d="M-0.5 5C-0.5 1.96 1.96 -0.5 5 -0.5C8.03 -0.5 10.5 1.96 10.5 5C10.5 6.55 9.85 7.96 8.8 8.96C7.81 9.91 6.47 10.5 5 10.5C3.52 10.5 2.18 9.91 1.19 8.96C0.14 7.96 -0.5 6.55 -0.5 5ZM8.11 8.56C7.89 7.9 7.26 7.43 6.53 7.43L3.46 7.43C2.73 7.43 2.1 7.9 1.88 8.56C2.71 9.29 3.8 9.73 5 9.73C6.19 9.73 7.28 9.29 8.11 8.56ZM5 1.03C3.65 1.03 2.56 2.12 2.56 3.46C2.56 4.8 3.65 5.89 5 5.89C6.34 5.89 7.43 4.8 7.43 3.46C7.43 2.12 6.34 1.03 5 1.03Z" fill="#50C787" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                     1 ур
+                                </h5>
                                 <span>tttt123@gmail.com</span>
                             </div>
                         </li>
@@ -73,7 +85,13 @@ export default function Club({onTabClub, onTabTrade, referals}) {
                                 <span>@tat1203</span>
                             </div>
                             <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
+                                                                <h5>
+                                    <svg width="11.000000" height="11.000000" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <defs/>
+                                        <path id="Vector" d="M-0.5 5C-0.5 1.96 1.96 -0.5 5 -0.5C8.03 -0.5 10.5 1.96 10.5 5C10.5 6.55 9.85 7.96 8.8 8.96C7.81 9.91 6.47 10.5 5 10.5C3.52 10.5 2.18 9.91 1.19 8.96C0.14 7.96 -0.5 6.55 -0.5 5ZM8.11 8.56C7.89 7.9 7.26 7.43 6.53 7.43L3.46 7.43C2.73 7.43 2.1 7.9 1.88 8.56C2.71 9.29 3.8 9.73 5 9.73C6.19 9.73 7.28 9.29 8.11 8.56ZM5 1.03C3.65 1.03 2.56 2.12 2.56 3.46C2.56 4.8 3.65 5.89 5 5.89C6.34 5.89 7.43 4.8 7.43 3.46C7.43 2.12 6.34 1.03 5 1.03Z" fill="#50C787" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                     1 ур
+                                </h5>
                                 <span>tttt123@gmail.com</span>
                             </div>
                         </li>
@@ -83,7 +101,13 @@ export default function Club({onTabClub, onTabTrade, referals}) {
                                 <span>@tat1203</span>
                             </div>
                             <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
+                                                                <h5>
+                                    <svg width="11.000000" height="11.000000" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <defs/>
+                                        <path id="Vector" d="M-0.5 5C-0.5 1.96 1.96 -0.5 5 -0.5C8.03 -0.5 10.5 1.96 10.5 5C10.5 6.55 9.85 7.96 8.8 8.96C7.81 9.91 6.47 10.5 5 10.5C3.52 10.5 2.18 9.91 1.19 8.96C0.14 7.96 -0.5 6.55 -0.5 5ZM8.11 8.56C7.89 7.9 7.26 7.43 6.53 7.43L3.46 7.43C2.73 7.43 2.1 7.9 1.88 8.56C2.71 9.29 3.8 9.73 5 9.73C6.19 9.73 7.28 9.29 8.11 8.56ZM5 1.03C3.65 1.03 2.56 2.12 2.56 3.46C2.56 4.8 3.65 5.89 5 5.89C6.34 5.89 7.43 4.8 7.43 3.46C7.43 2.12 6.34 1.03 5 1.03Z" fill="#50C787" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                     1 ур
+                                </h5>
                                 <span>tttt123@gmail.com</span>
                             </div>
                         </li>
@@ -93,7 +117,13 @@ export default function Club({onTabClub, onTabTrade, referals}) {
                                 <span>@tat1203</span>
                             </div>
                             <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
+                                                                <h5>
+                                    <svg width="11.000000" height="11.000000" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <defs/>
+                                        <path id="Vector" d="M-0.5 5C-0.5 1.96 1.96 -0.5 5 -0.5C8.03 -0.5 10.5 1.96 10.5 5C10.5 6.55 9.85 7.96 8.8 8.96C7.81 9.91 6.47 10.5 5 10.5C3.52 10.5 2.18 9.91 1.19 8.96C0.14 7.96 -0.5 6.55 -0.5 5ZM8.11 8.56C7.89 7.9 7.26 7.43 6.53 7.43L3.46 7.43C2.73 7.43 2.1 7.9 1.88 8.56C2.71 9.29 3.8 9.73 5 9.73C6.19 9.73 7.28 9.29 8.11 8.56ZM5 1.03C3.65 1.03 2.56 2.12 2.56 3.46C2.56 4.8 3.65 5.89 5 5.89C6.34 5.89 7.43 4.8 7.43 3.46C7.43 2.12 6.34 1.03 5 1.03Z" fill="#50C787" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                     1 ур
+                                </h5>
                                 <span>tttt123@gmail.com</span>
                             </div>
                         </li>
@@ -103,7 +133,13 @@ export default function Club({onTabClub, onTabTrade, referals}) {
                                 <span>@tat1203</span>
                             </div>
                             <div className="referal__list--body-li-right">
-                                <h5>1ур</h5>
+                                                                <h5>
+                                    <svg width="11.000000" height="11.000000" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <defs/>
+                                        <path id="Vector" d="M-0.5 5C-0.5 1.96 1.96 -0.5 5 -0.5C8.03 -0.5 10.5 1.96 10.5 5C10.5 6.55 9.85 7.96 8.8 8.96C7.81 9.91 6.47 10.5 5 10.5C3.52 10.5 2.18 9.91 1.19 8.96C0.14 7.96 -0.5 6.55 -0.5 5ZM8.11 8.56C7.89 7.9 7.26 7.43 6.53 7.43L3.46 7.43C2.73 7.43 2.1 7.9 1.88 8.56C2.71 9.29 3.8 9.73 5 9.73C6.19 9.73 7.28 9.29 8.11 8.56ZM5 1.03C3.65 1.03 2.56 2.12 2.56 3.46C2.56 4.8 3.65 5.89 5 5.89C6.34 5.89 7.43 4.8 7.43 3.46C7.43 2.12 6.34 1.03 5 1.03Z" fill="#50C787" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                     1 ур
+                                </h5>
                                 <span>tttt123@gmail.com</span>
                             </div>
                         </li>

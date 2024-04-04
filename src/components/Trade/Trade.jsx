@@ -29,16 +29,16 @@ export default function Trade({onTabClub, onTabTrade, referals}) {
             <Slider/>
             <div className="navigat">
                 <div onClick={onTabClub}>
-                    Клубные вознаграждения
+                    <span>Клубные вознаграждения</span>
                 </div>
                 <div className="activ" onClick={onTabTrade}>
-                    Торговые вознаграждения
+                <span>Торговые вознаграждения</span>
                 </div>
             </div>
             <div className="referal__list">
                 <div className="referal__list--header">
                     <ul>
-                        <li>Все</li>
+                        <li className="referal__list--all">Все</li>
                         <li className="activ">1 ур</li>
                         <li>2 ур</li>
                         <li>3 ур</li>
